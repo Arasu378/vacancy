@@ -17,10 +17,6 @@ public class CandidateSkill {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "subSKillId")
 	private SubSkill subSkillId;
-	
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "skillId")
-	private Skill skill;
 
 	public Integer getId() {
 		return id;
@@ -36,14 +32,6 @@ public class CandidateSkill {
 
 	public void setCandidate(Candidate candidate) {
 		this.candidate = candidate;
-	}
-
-	public Skill getSkill() {
-		return skill;
-	}
-
-	public void setSkill(Skill skill) {
-		this.skill = skill;
 	}
 
 	public SubSkill getSubSkillId() {
