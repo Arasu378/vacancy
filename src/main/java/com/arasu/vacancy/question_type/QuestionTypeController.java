@@ -30,11 +30,11 @@ public class QuestionTypeController {
     private QuestionTypeService questionTypeService;
 
 
-    @ApiOperation(value = "test", response = QuestionTypeResponse.class)
-    @RequestMapping(path = Constants.SAVE_SUB_SKILL, method = RequestMethod.POST)
-    public QuestionTypeResponse addQuestionType(@ApiParam(value = "sub skills details to save", required = true)
+    @ApiOperation(value = "Question Type to save", response = QuestionTypeResponse.class)
+    @RequestMapping(path = Constants.QUESTION_TYPE_SAVE, method = RequestMethod.POST)
+    public QuestionTypeResponse addQuestionType(@ApiParam(value = "question type details to save", required = true)
                                           @Valid @RequestBody QuestionTypeInput questionTypeInput) {
-        return questionTypeService.test();
+        return questionTypeService.saveQuestionType(questionTypeInput);
     }
 
 }

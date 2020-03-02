@@ -72,4 +72,7 @@ public class Utils {
 			}
 	 		return myDate;
 	 	}
+	 	public static Date currentDate() {
+			return new Date();
+		}
 }

@@ -26,8 +26,8 @@ public class Questions {
 	private QuestionType questionType;
 	
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "skillType")
-	private Skill skill;
+	@JoinColumn(name = "subSkillType")
+	private SubSkill subSkill;
 	
 	@Column(name = "createdAt")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -69,12 +69,12 @@ public class Questions {
 		this.questionType = questionType;
 	}
 
-	public Skill getSkill() {
-		return skill;
+	public SubSkill getSkill() {
+		return subSkill;
 	}
 
-	public void setSkill(Skill skill) {
-		this.skill = skill;
+	public void setSkill(SubSkill subSkill) {
+		this.subSkill = subSkill;
 	}
 
 	public Date getCreatedAt() {

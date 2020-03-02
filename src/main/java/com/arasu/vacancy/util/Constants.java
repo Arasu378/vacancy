@@ -9,6 +9,7 @@ public class Constants {
 	public static final String CANDIDATE = "/candidate";
 	public static final String SKILLS = "/skills";
 	public static final String QUESTION_TYPE = "/questionType";
+	public static final String QUESTION_TYPE_SAVE = "/save";
 	public static final String CANDIDATE_REGISTER = "/candidate_register";
 	public static final String SAVE_SUB_SKILL = "/saveSubSkill";
 	public static final String SAVE_SKILL = "/saveSkill";

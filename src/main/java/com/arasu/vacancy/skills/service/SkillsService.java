@@ -4,10 +4,10 @@ import com.arasu.vacancy.entity.Skill;
 import com.arasu.vacancy.skills.models.SkillsInput;
 import com.arasu.vacancy.skills.models.SkillsResponse;
 import com.arasu.vacancy.skills.repository.SkillsRepository;
+import com.arasu.vacancy.util.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -39,11 +39,10 @@ public class SkillsService {
         return new SkillsResponse(false, "Failed", null, null);
     }
     private Skill skillData(SkillsInput skillsInput) {
-        Date date = new Date();
         Skill skill = new Skill();
         skill.setSkillName(skillsInput.getSkillName());
-        skill.setCreatedAt(date);
-        skill.setUpdatedAt(date);
+        skill.setCreatedAt(Utils.currentDate());
+        skill.setUpdatedAt(Utils.currentDate());
         return skill;
     }
 

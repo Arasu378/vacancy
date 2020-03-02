@@ -6,10 +6,10 @@ import com.arasu.vacancy.skills.models.SubSkillsInput;
 import com.arasu.vacancy.skills.models.SubSkillsResponse;
 import com.arasu.vacancy.skills.repository.SkillsRepository;
 import com.arasu.vacancy.skills.repository.SubSkillsRepository;
+import com.arasu.vacancy.util.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -53,13 +53,12 @@ public class SubSkillService {
 
 
     private SubSkill passData(SubSkillsInput subSkillsInput) {
-        Date date = new Date();
         SubSkill subSkill = new SubSkill();
         Skill skill = skillsRepository.findBySkillId(subSkillsInput.getSkillId());
             subSkill.setSubSKillName(subSkillsInput.getName());
             subSkill.setSkill(skill);
-            subSkill.setCreatedAt(date);
-            subSkill.setUpdatedAt(date);
+            subSkill.setCreatedAt(Utils.currentDate());
+            subSkill.setUpdatedAt(Utils.currentDate());
         return subSkill;
     }
 }

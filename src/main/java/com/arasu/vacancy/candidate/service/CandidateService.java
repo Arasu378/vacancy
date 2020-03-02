@@ -13,7 +13,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -44,13 +43,13 @@ public class CandidateService {
 	private Candidate candidateObject(CandidateInput candidateInput) {
 		Candidate candidate = new Candidate();
 		candidate.setCandidatePreferredTime(Utils.dateFormatter(candidateInput.getCandidatePreferredTime()));
-		candidate.setCreatedAt(new Date());
+		candidate.setCreatedAt(Utils.currentDate());
 		candidate.setEmail(candidateInput.getCandidateEmail());
 		candidate.setFirstName(candidateInput.getFirstName());
 		candidate.setLastName(candidateInput.getLastName());
 		candidate.setIsSenior(candidateInput.isSenior());
 		candidate.setMobile(candidateInput.getCandidateMobile());
-		candidate.setUpdatedAt(new Date());
+		candidate.setUpdatedAt(Utils.currentDate());
 		candidate.setYearOfExperience(candidateInput.getYearsOfExperience());
 		candidate.setUser(getUser(candidateInput.getUserId()));
 		return candidate;

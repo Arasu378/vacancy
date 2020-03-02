@@ -3,6 +3,15 @@ package com.arasu.vacancy.entity;
 import javax.persistence.*;
 import java.util.Date;
 
+/**
+ * QuestionTypes:
+ * TEXT
+ * CHECKBOX
+ * SELECT
+ * MULTI-SELECT
+ * RADIO-BOX
+ */
+
 @Entity
 @Table(name = "v06_question_type")
 public class QuestionType {

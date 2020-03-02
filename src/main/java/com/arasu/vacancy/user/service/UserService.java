@@ -26,7 +26,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 
 @Service
@@ -111,12 +110,12 @@ public class UserService implements UserDetailsService {
 		user.setEmail(userInput.getEmail());
 		user.setPassword(Utils.hashPassword(userInput.getPassword()));
 		Role role = new Role();
-		role.setCreatedAt(new Date());
-		role.setUpdatedAt(new Date());
+		role.setCreatedAt(Utils.currentDate());
+		role.setUpdatedAt(Utils.currentDate());
 		role.setRoleName(userInput.getRole());
 		user.setRole(role);
-		user.setCreatedAt(new Date());
-		user.setUpdatedAt(new Date());
+		user.setCreatedAt(Utils.currentDate());
+		user.setUpdatedAt(Utils.currentDate());
 		return user;
 	}
 
