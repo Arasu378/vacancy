@@ -9,7 +9,13 @@ public class Constants {
 	public static final String CANDIDATE = "/candidate";
 	public static final String SKILLS = "/skills";
 	public static final String QUESTION_TYPE = "/questionType";
+	public static final String QUESTION = "/question";
 	public static final String QUESTION_TYPE_SAVE = "/save";
+	public static final String QUESTION_SAVE = "/save";
+	public static final String QUESTIONS_GET_BY_ID = "/getById/{questionId}";
+	public static final String QUESTIONS_GET_BY_TYPE_ID = "/getByTypeId/{typeId}";
+	public static final String QUESTIONS_GET_BY_SUB_SKILL_ID = "/getByTypeId/{subSkillId}";
+	public static final String QUESTIONS_GET_ALL = "/getAll";
 	public static final String CANDIDATE_REGISTER = "/candidate_register";
 	public static final String SAVE_SUB_SKILL = "/saveSubSkill";
 	public static final String SAVE_SKILL = "/saveSkill";
