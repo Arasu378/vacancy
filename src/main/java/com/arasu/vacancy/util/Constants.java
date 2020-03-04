@@ -13,6 +13,11 @@ public class Constants {
 	public static final String ANSWER_GET_BY_ID = "/getById/{answerId}";
 	public static final String ANSWER_GET_BY_QUESTION_ID = "/getByQuestionId/{questionId}";
 	public static final String ANSWER_GET_ALL = "/getAll";
+	public static final String CANDIDATE_QUESTIONS = "/candidate-questions";
+	public static final String CANDIDATE_QUESTIONS_SAVE = "/save";
+	public static final String CANDIDATE_QUESTIONS_ALL = "/getAll";
+	public static final String CANDIDATE_QUESTIONS_BY_CANDIDATE_ID = "/questions/{candidateId}";
+	public static final String CANDIDATE_QUESTIONS_BY_ID = "/questions/{id}";
 
 	public static final String QUESTION_TYPE = "/questionType";
 	public static final String QUESTION = "/question";
