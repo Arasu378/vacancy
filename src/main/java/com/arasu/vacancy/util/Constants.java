@@ -8,6 +8,12 @@ public class Constants {
 	public static final String USER = "/user";
 	public static final String CANDIDATE = "/candidate";
 	public static final String SKILLS = "/skills";
+	public static final String ANSWERS = "/answer";
+	public static final String ANSWER_SAVE = "/save";
+	public static final String ANSWER_GET_BY_ID = "/getById/{answerId}";
+	public static final String ANSWER_GET_BY_QUESTION_ID = "/getByQuestionId/{questionId}";
+	public static final String ANSWER_GET_ALL = "/getAll";
+
 	public static final String QUESTION_TYPE = "/questionType";
 	public static final String QUESTION = "/question";
 	public static final String QUESTION_TYPE_SAVE = "/save";
