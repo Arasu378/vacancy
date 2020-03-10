@@ -1,6 +1,7 @@
 package com.arasu.vacancy.user;
 
 
+import com.arasu.vacancy.entity.User;
 import com.arasu.vacancy.user.model.RegisterResponse;
 import com.arasu.vacancy.user.model.UserInput;
 import com.arasu.vacancy.user.service.UserService;
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @Api(value="User Controls", description = "Users with Controls")
@@ -51,5 +53,11 @@ public class UserController {
 	@RequestMapping(path = Constants.GET_ALL_CANDIDATES_BY_USER_ID, method = RequestMethod.GET)
 	public RegisterResponse getAllCandidatesByUserId(@PathVariable(name = "userId") Integer userId) {
 		return userService.getAllCandidatesByUserId(userId);
+	}
+
+	@ApiOperation(value = "Get All Users", response = RegisterResponse.class)
+	@RequestMapping(path = Constants.GET_ALL_CANDIDATES_T, method = RequestMethod.GET)
+	public List<User> getAllUsers() {
+		return userService.getAll();
 	}
 }

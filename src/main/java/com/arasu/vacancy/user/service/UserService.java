@@ -26,6 +26,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 @Service
@@ -101,6 +102,9 @@ public class UserService implements UserDetailsService {
 		Utils.checkPass(pass, hashedPassword);
 		return  (hashedPassword);
 		
+	}
+	public List<User> getAll() {
+		return null;
 	}
 	private User getUser(UserInput userInput) {
 		User user = new User();

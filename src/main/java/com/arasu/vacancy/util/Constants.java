@@ -37,6 +37,7 @@ public class Constants {
 	public static final String GET_SUB_SKILL_BY_SKILL_ID = "/subSkills/skillId/{skillId}";
 	public static final String GET_ALL_CANDIDATES = "/candidatesAll";
 	public static final String GET_ALL_CANDIDATES_BY_USER_ID = "/candidatesAll/{userId}";
+	public static final String GET_ALL_CANDIDATES_T= "/all";
 
 
 
